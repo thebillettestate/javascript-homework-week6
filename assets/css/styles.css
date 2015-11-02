@@ -1,0 +1,103 @@
+p {
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 21px;
+}
+
+body{
+  background: #e74c3c;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+/* Place content centere on page */
+.mainContent{
+ position: fixed;
+  top: 20%;
+  left: 40%;
+  /*margin-top: -50px;*/
+  margin-left: -50px;
+}
+
+.textPrompt{
+  padding-bottom: 22px;
+}
+
+/* Stylize the text input boxes */
+#txtName, #testValue {
+    width: 200px;
+    background: #f2796c;
+    padding: 20px 30px 20px 10px;
+    margin: 10px 14px 10px 0;
+    border:0px;
+    color: white;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+  
+/* Stylize the placeholder text input boxes (found this on the web) */  
+::-webkit-input-placeholder {
+   color: white;
+   opacity: 0.5;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;  
+   opacity: 0.5;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white; 
+   opacity: 0.5; 
+}
+
+:-ms-input-placeholder {  
+   color: white; 
+   opacity: 0.5; 
+}
+
+
+/* Add a glow highlight transition when you click in a text input area */
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+/*padding: 33px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #ad2214;*/
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #ad2214;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #ad2214;
+}
+
+/* Stylize the submit buttons */ 
+input[type=submit] {
+  background:#e74c3c;
+  border: 1px solid white;
+  padding: 18px 32px;
+  color: white;
+  cursor:pointer;
+  /*-webkit-border-radius: 5px;
+  border-radius: 5px; */
+}
+
+/* Add a hover effect to the submit buttons */ 
+input[type=submit]:hover {
+  background: white;
+  color: #e74c3c;
+  -webkit-transition: All 1s ease;
+  -moz-transition: All 1s ease;
+  -o-transition: All 1s ease;
+  -ms-transition: All 1s ease;
+  transition: All 1s ease;
+}
