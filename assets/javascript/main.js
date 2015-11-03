@@ -10,11 +10,11 @@
 
 //----The above was the long way of logging everything. Use a loop intead. -------\\
 
-var students = new Array ( );
-students[0] = new Array ( "Ralph", "80" );
-students[1] = new Array ( "Zach", "90" );
-students[2] = new Array ("Tony", "100");
-students[3] = new Array ("Buster", "10")
+var students = [];
+students[0] = [ "Ralph", "80" ];
+students[1] = [ "Zach", "90" ];
+students[2] = ["Tony", "100"];
+students[3] = ["Buster", "10"]
 
 
 for ( i=0; i<students.length; i++ )
