@@ -1,46 +1,44 @@
-
-
-// var students = ["Ralph", "Zach", "Tony"];
-// var grades = ["80", "90", "100"];
-
-// console.log( students[0][0] + " got " + students[0][1] + "% on the test.");
-// console.log( students[1][0] + " got " + students[1][1]  + "% on the test."); 
-// console.log( students[2][0] + " got " + students[2][1]  + "% on the test."); 
-
-
-//----The above was the long way of logging everything. Use a loop intead. -------\\
+  //-----------Use (document).ready to prep up all of your JQuery--------------\\
+$(document).ready(function(){ 
 
 var students = [];
-students[0] = [ "Ralph", "80" ];
-students[1] = [ "Zach", "90" ];
-students[2] = ["Tony", "100"];
-students[3] = ["Buster", "10"]
+students[0] = {StudentName: "Ralph", grade: 80 };
+students[1] = {StudentName: "Zach", grade: 90 };
+students[2] = {StudentName: "Tony", grade: 100};
+students[3] = {StudentName: "Buster", grade: 10};
 
 
 for ( i=0; i<students.length; i++ )
 {
-    console.log( students[i][0] + " got " + students[i][1] + "% on the test.");
+    console.log(students[i].StudentName + " got " + students[i].grade + "% on the test.");
 }
 
 
- function tellAge(){
-  var txtName = document.getElementById("txtName");
-  // var txtOutput = document.getElementById("txtOutput");
-  var name = txtName.value;
-  alert("Ooooh girl, you must be " + (2015 - name) + " years old.");
-  }
+  $('#yearAsk').submit(function(event){
+  	var yearFill = $('#txtName').val();
+  	var yourAge = new Date().getFullYear() - yearFill;
 
-  //-----------Use (document).ready to prep up all of your JQuery--------------\\
-$(document).ready(function(){ 
+  	$('#calculated-year').html("Ooooh girl, you must be " + yourAge + " years old.");
+  	event.preventDefault();
+  });
 
-  $( "#target" ).submit(function( event ) {
-  	var testValue = document.getElementById("testValue");
-  	var fieldFill = testValue.value;
 
-	  alert( "Woahhh dude. You must have been born in the year " + (2015 - fieldFill));
+
+//Whenever you write a callback function, you must pass the argument "event" (or it could just be "e"...or anything you'd like)
+  $( "#ageAsk" ).submit(function( event ) {
+  	// var testValue = document.getElementById("testValue");
+  	// var fieldFill = testValue.value;
+  	// The above example is pure JS. The example below uses a Jquery val function. Less code - better practice.
+
+	  var ageFill = $("#testValue").val();
+	  var yearBorn = 2015 - ageFill;
+
+	  // alert( "Woahhh dude. You must have been born in the year " + yearBorn);
+	  $("#calculated-age").html("Woahhh dude. You must have been born in the year " + yearBorn + "!")
 	  event.preventDefault();
 	});
 
+// Class notes go over how to validate form submissions. 
 
 
   });

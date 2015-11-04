@@ -16,10 +16,15 @@
 
 		<div class = "textPrompt">
 			<p>Hey girl. What year you were born? </p>
-			<form action = "">
-			  <input type = "text" id = "txtName" placeholder="Type the year here">
-			  <input type = "submit" value = "TELL ME" onclick = "tellAge()">
+
+			<form id="yearAsk" action = "">
+			  <input type = "text" name = "year" id = "txtName" placeholder="Type the year here">
+			  <input type = "submit" value = "TELL ME">
 			</form>
+
+			<div class = "calculated-year" id="calculated-year">
+			</div>
+
 		</div>
 
 	<!-- Accomplish challenge using a jQuery submit handler -->
@@ -27,10 +32,14 @@
 
 		<div class = "textPrompt">
 			<p>Yo son. How old are you?</p>
-			<form id="target" action="">
-			  <input id="testValue" type="text" placeholder="Type your age here">
+			<form id="ageAsk" action="">
+			  <input id="testValue" type="text" name="age" placeholder="Type your age here">
 			  <input type="submit" value="TELL ME">
 			</form>
+
+			<div class = "calculated-age" id="calculated-age">
+			</div>
+
 		</div>
 
 </div>

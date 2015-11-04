@@ -13,6 +13,13 @@ img{
   vertical-align: bottom;
 }
 
+.calculated-age, .calculated-year{
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+  color: #aa2315;
+  font-size: 16px;
+}
+
 /* Place content centere on page */
 .mainContent{
  position: fixed;
